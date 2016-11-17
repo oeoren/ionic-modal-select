@@ -49,7 +49,7 @@
                   class="item item-checkbox" ng-class="ui.itemClass"
                   ng-repeat="optionm in options track by optionm[0]">
                     <label class="checkbox">
-                        <input type="checkbox" ng-model="isChecked[optionm[0]]">
+                        <input type="checkbox" ng-checked="optionm['checked']" ng-model="isChecked[optionm[0]]">
                     </label>
                     <div ng-init="option=optionm[1]" compile="inner" compile-once="true"></div>
                 </div>

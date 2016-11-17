@@ -25,14 +25,14 @@ var webPackConfigProduction = require('./webpack.config.production');
 
 
 // use webpack.config.js to build modules
-gulp.task('webpack', () => {
+gulp.task('webpack', function(e)  {
   return gulp.src(paths.webpack)
     .pipe(plumber())
     .pipe(webpackStream(webPackConfig))
     .pipe(gulp.dest(paths.output))
 });
 
-gulp.task('webpack-production', () => {
+gulp.task('webpack-production', function(e) {
   return gulp.src(paths.webpack)
     .pipe(plumber())
     .pipe(webpackStream(webPackConfigProduction))
